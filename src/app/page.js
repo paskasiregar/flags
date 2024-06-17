@@ -10,11 +10,11 @@ export default async function Home() {
   console.log(data);
 
   return (
-    <main className="max-w-6xl m-auto py-2 space-y-4">
+    <main className="max-w-6xl m-auto py-2 space-y-8">
       <h1 className="text-4xl font-bold w-full bg-indigo-50 p-8">
         All the countries across the world 🌍
       </h1>
-      <div className="space-y-16 grid grid-cols-3 justify-between items-center">
+      <div className="grid grid-cols-3 justify-between items-center">
         {data.map((item) => {
           return <CountryCard key={item._id} item={item} />;
         })}
