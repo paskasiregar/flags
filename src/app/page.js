@@ -14,7 +14,7 @@ export default async function Home() {
       <h1 className="text-4xl font-bold w-full bg-indigo-50 p-8">
         All the countries across the world 🌍
       </h1>
-      <div className="grid grid-cols-3 justify-between items-center">
+      <div className="grid grid-cols-3 p-4 justify-between items-center">
         {data.map((item) => {
           return <CountryCard key={item._id} item={item} />;
         })}

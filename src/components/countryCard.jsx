@@ -19,21 +19,22 @@ export const CountryCard = ({ item }) => {
   }
 
   return (
-    <div>
-      {" "}
-      <div>
-        <h3 className="text-xl font-bold text-slate-700">
-          Country: {item.country}
-        </h3>
-        <p className="text-lg text-slate-400">Capital: {item.capital}</p>
-        <p className="text-4xl">{item.flag}</p>
-        <button
-          onClick={handleDeleteCountry}
-          className="border-2 border-solid border-indigo-500 px-4 py-2 rounded-lg text-indigo-500 hover:border-rose-500 hover:bg-rose-50 hover:text-rose-500"
-        >
-          Delete
-        </button>
+    <div className="w-full max-w-sm mx-auto p-6 border-2 border-dashed border-indigo-1~00 rounded-lg shadow-md bg-white space-y-4">
+      <div className="flex justify-between items-center">
+        <div>
+          <h3 className="text-xl font-bold text-slate-700">
+            Country: {item.country}
+          </h3>
+          <p className="text-lg text-slate-400">Capital: {item.capital}</p>
+        </div>
+        <div className="text-4xl">{item.flag}</div>
       </div>
+      <button
+        onClick={handleDeleteCountry}
+        className="w-full border-2 border-solid border-indigo-100 px-4 py-2 rounded-lg text-indigo-500 hover:border-rose-500 hover:bg-rose-50 hover:text-rose-500 transition duration-200"
+      >
+        Delete
+      </button>
     </div>
   );
 };
