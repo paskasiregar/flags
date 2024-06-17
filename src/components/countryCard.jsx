@@ -19,15 +19,15 @@ export const CountryCard = ({ item }) => {
   }
 
   return (
-    <div className="w-full max-w-sm mx-auto p-6 border-2 border-dashed border-indigo-1~00 rounded-lg shadow-md bg-white space-y-4">
-      <div className="flex justify-between items-center">
-        <div>
+    <div className="w-full max-w-sm mx-auto p-8 border-2 border-dashed border-indigo-100 rounded-lg shadow-md bg-white space-y-4 md:space-y-2">
+      <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+        <div className="flex-grow">
           <h3 className="text-xl font-bold text-slate-700">
             Country: {item.country}
           </h3>
           <p className="text-lg text-slate-400">Capital: {item.capital}</p>
         </div>
-        <div className="text-4xl">{item.flag}</div>
+        <div className="text-4xl md:ml-4">{item.flag}</div>
       </div>
       <button
         onClick={handleDeleteCountry}
